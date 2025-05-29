@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>اكتمل التحميل</title>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 2em;
+        }
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2em;
+            display: inline-block;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 1em;
+            background-color: #2196F3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a.button:hover {
+            background-color: #0b7dda;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✅ تم التحميل بنجاح!</h1>
+        <p>اضغط على الزر أدناه لتحميل الملف:</p>
+        <a href="{{ file_url }}" class="button" download>📥 تحميل الملف</a>
+    </div>
+</body>
+</html>
