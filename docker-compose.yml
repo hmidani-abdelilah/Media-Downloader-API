@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  media-downloader:
+    build: .
+    container_name: media-downloader
+    ports:
+      - "8090:8000"
+    restart: unless-stopped
+    environment:
+      LANG: C.UTF-8
+      DEBIAN_FRONTEND: noninteractive
