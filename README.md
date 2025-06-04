@@ -179,7 +179,7 @@ docker-compose up --build
 ```bash
 docker-compose down
 ```
-## الحاوية في docker Hub
+## الحاوية في docker Hub مباشرة من دون البناء 
 [https://hub.docker.com/r/abdelilahxq/media-downloader-api](https://hub.docker.com/r/abdelilahxq/media-downloader-api)
 
 ## 📦 الحزم المستخدمة
