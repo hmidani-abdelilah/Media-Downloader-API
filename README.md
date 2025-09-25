@@ -64,6 +64,12 @@ ffmpeg -version
 sudo apt install ffmpeg
 ```
 
+* Ubuntu/Debian:
+
+```bash
+sudo apt install aria2c
+```
+
 * Windows: من [ffmpeg.org](https://ffmpeg.org/download.html)
 * macOS:
 
