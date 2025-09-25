@@ -8,7 +8,8 @@ ENV LANG=C.UTF-8
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y python3 python3-venv python3-pip python3-dev ffmpeg git && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y python3 python3-venv python3-pip python3-dev ffmpeg git aria2 && rm -rf /var/lib/apt/lists/*
+
 # Set the working directory
 WORKDIR /app
 
