@@ -163,6 +163,13 @@ async def download(
                     'outtmpl': os.path.join(folder_path, '%(title)s.%(ext)s'),
                     'quiet': True,
                     'merge_output_format': 'mp4',
+                    'external_downloader': 'aria2c',
+                    'external_downloader_args': [
+                        '--min-split-size=1M',
+                        '--max-connection-per-server=16',
+                        '--max-concurrent-downloads=16',
+                        '--split=16'
+                    ],
                 }
                 with yt_dlp.YoutubeDL(ydl_opts) as ydl:
                     ydl.download([url])
@@ -177,6 +184,13 @@ async def download(
                         'format': 'bestaudio/best',
                         'outtmpl': tmp_file,
                         'quiet': True,
+                        'external_downloader': 'aria2c',
+                        'external_downloader_args': [
+                            '--min-split-size=1M',
+                            '--max-connection-per-server=16',
+                            '--max-concurrent-downloads=16',
+                            '--split=16'
+                        ],
                     }
                     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
                         ydl.download([entry['webpage_url']])
@@ -217,6 +231,13 @@ async def download(
                 'format': 'bestaudio/best',
                 'outtmpl': temp_path,
                 'quiet': True,
+                'external_downloader': 'aria2c',
+                'external_downloader_args': [
+                    '--min-split-size=1M',
+                    '--max-connection-per-server=16',
+                    '--max-concurrent-downloads=16',
+                    '--split=16'
+                ],
             }
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
                 ydl.download([url])
@@ -260,6 +281,16 @@ async def download(
                 'outtmpl': out_file,
                 'quiet': True,
                 'merge_output_format': q_ext,
+                'external_downloader': 'aria2c',
+                'external_downloader_args': [
+
+                    '--min-split-size=1M',
+
+                    '--max-connection-per-server=16',
+
+                    '--max-concurrent-downloads=16',
+
+                    '--split=16'],
             }
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
                 ydl.download([url])
@@ -277,7 +308,7 @@ async def download(
             "is_playlist": False,
             "playlist_entries": None
         })
-
+    
 @app.get("/download")
 async def download_get(
     url: str = Query(...),
@@ -299,6 +330,13 @@ async def download_get(
                 'format': 'bestaudio/best',
                 'outtmpl': temp_path,
                 'quiet': True,
+                'external_downloader': 'aria2c',
+                'external_downloader_args': [
+                    '--min-split-size=1M',
+                    '--max-connection-per-server=16',
+                    '--max-concurrent-downloads=16',
+                    '--split=16'
+                ],
             }
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
                 ydl.download([url])
@@ -335,6 +373,13 @@ async def download_get(
                 'outtmpl': out_file,
                 'quiet': True,
                 'merge_output_format': q_ext,
+                'external_downloader': 'aria2c',
+                'external_downloader_args': [
+                    '--min-split-size=1M',
+                    '--max-connection-per-server=16',
+                    '--max-concurrent-downloads=16',
+                    '--split=16'
+                ],
             }
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
                 ydl.download([url])
